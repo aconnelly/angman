@@ -1,8 +1,7 @@
-
-*{
-  box-sizing:border-box;
-  padding:0;
-  margin:0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -10,28 +9,26 @@ html {
   font-size: 16px;
 }
 
-.startButton{
+.startButton {
   z-index: 2;
   position: absolute;
-  top:30px;
-  left:200px;
-  width:300px;
-  height:30px;
-  border:none;
-  outline:0;
-  
+  top: 30px;
+  left: 200px;
+  width: 300px;
+  height: 30px;
+  border: none;
+  outline: 0;
   background-color: green;
-  color:white;
+  color: white;
 }
-
 
 .alphabetBox {
   position: relative;
-  margin-left:100px;
+  margin-left: 100px;
   margin-top: 80px;
-  width:200px;
-  padding:10px;
-  border:1px solid red;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid red;
 }
 
 .alphabetBox > ul > li {
@@ -39,57 +36,59 @@ html {
   letter-spacing: 1rem;
 }
 
-.livesCount{
+.livesCount {
   position: relative;
-  margin-left:100px;
+  margin-left: 100px;
   margin-bottom: 30px;
   list-style-type: none;
 }
-.livesCount > li {
 
+.livesCount > li {
   display: inline-block;
 }
 
-.life{
-  height:0;
-  width:0;
+.life {
+  height: 0;
+  width: 0;
   margin-left: 10px;
-  border:5px solid red;
+  border: 5px solid red;
   border-radius: 50%;
-  color:red;
+  color: red;
 }
 
-.userInput{
+.userInput {
   position: relative;
   margin-left: 100px;
-
 }
 
-.hiddenLetter{
+.hiddenLetter {
   border-bottom: 2px solid black;
 }
 
 .guessPlay {
   position: relative;
-  width:400px;
-  height:3.5rem;
+  width: 400px;
+  height: 3.5rem;
   display: inline-block;
   border: 1px solid blue;
   margin-left: 100px;
 }
-.targetWord{
 
+.targetWord {
   padding-bottom: 0;
-  width:2rem;
-  height:3rem;
+  width: 2rem;
+  height: 3rem;
   margin-right: .25rem;
-
   font-size: 3rem;
-  display:inline-block;
+  display: inline-block;
 }
+
 .letterGuessed {
-  color:red;
+  color: red;
 }
+
 .letterGuessed.correctGuess {
-  color:green;
+  color: green;
 }
+
+/*# sourceMappingURL=styles.css.map */

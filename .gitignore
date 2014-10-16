@@ -1,0 +1,13 @@
+# Dependency directorys
+node_modules/
+gruntfile.js
+
+### bower install components ###
+client/lib
+
+### hidden files
+**/.*
+
+### Sass ###
+**.scss
+**.css.map
