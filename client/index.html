@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angman</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body ng-app="angman" ng-controller="mainController">
+<button class="startButton" ng-click="setWord()"> start </button>
+
+<div class="alphabetBox">
+  <ul>
+    <li ng-repeat="letter in alphabet" ng-class="{'letterGuessed': checkIfGuessed(letter), 'correctGuess': checkIfCorrectGuess(letter)}">{{ letter }}</li>
+  </ul>
+</div>
+
+<ul class="livesCount">
+  <li>Lives: </li>
+  <li class="life" ng-repeat="life in getLives(lives) track by $index"></li>
+</ul>
+
+
+<div class="guessPlay">
+  <div class="targetWord" ng-repeat="char in word" ng-class="{'hiddenLetter':!checkIfGuessed(char)}">
+    <div ng-show="checkIfGuessed(char)">
+      {{char}}
+    </div>
+  </div>
+</div>
+
+<div class="userInput">
+  <form novalidate name="userGuess" ng-submit="submitGuess()">
+    <!-- input type radio, for guess full word option -->
+    <input type="text" ng-model="guess" required>
+    <input type="submit" class="guessButton" value="submit" />
+  </form>
+  <p ng-show="errorMessage" class="errorMessage"> {{errorMessage}} </p>
+</div>
+  <script src="lib/angular/angular.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
